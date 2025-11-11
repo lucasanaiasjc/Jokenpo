@@ -1,0 +1,106 @@
+/* Centraliza os blocos principais */
+#area-jogo,
+#placar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo da tabela de pontuação */
+#placar {
+    text-align: center;
+}
+
+#placar>table {
+    border: 1px solid #CCC;
+    margin-bottom: 1em;
+}
+
+#placar>table td {
+    width: 150px;
+    border: 1px solid #CCC;
+}
+
+/* Área do “VS” entre as mãos */
+#area-vs {
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-vs {
+    font-size: 3em;
+}
+
+/* Nome acima das imagens das mãos */
+.titulo-jogador {
+    height: 3em;
+    text-align: center;
+}
+
+.titulo-jogador>span {
+    font-size: 1.5em;
+}
+
+/* Imagens das mãos */
+.mao,
+.mao-aleatoria {
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Resultado da rodada */
+#resultado-rodada {
+    padding: 1em;
+    text-align: center;
+}
+
+#resultado-rodada>span {
+    font-size: 1.2em;
+}
+
+/* Container que segura cada mão */
+.container-mao {
+    width: fit-content;
+    position: relative;
+}
+
+/* Opções de jogada (pedra, papel, tesoura) */
+#opcoes-jogada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-mao {
+    padding: 1em;
+    border: 1px solid #CCC;
+}
+
+#opcoes-jogada>div:hover {
+    cursor: pointer;
+    background-color: #CCC;
+}
+
+#opcoes-jogada>div>span {
+    display: block;
+    font-size: 1.2em;
+}
+
+/* Animação da mão do computador antes de escolher */
+.mao-aleatoria {
+    transform-origin: bottom center;
+    animation: balanco 0.15s ease-in-out infinite alternate;
+}
+
+@keyframes balanco {
+    0% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(-15deg);
+    }
+}

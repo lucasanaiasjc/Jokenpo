@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel e Tesoura</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Placar do jogo -->
+    <div id="placar">
+        <table>
+            <thead>
+                <tr>
+                    <th>Jogador</th>
+                    <th>Computador</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="pontuacao-jogador">0</td>
+                    <td id="pontuacao-computador">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Área principal da partida -->
+    <div id="area-jogo">
+        <!-- Mão do jogador -->
+        <div class="container-mao">
+            <div class="titulo-jogador">
+                <span>Jogador</span>
+            </div>
+            <img src="./images/pedra.png" id="mao-jogador" class="mao" width="100%" alt="Pedra">
+        </div>
+
+        <!-- Texto VS -->
+        <div id="area-vs">
+            <span class="texto-vs">Vs</span>
+        </div>
+
+        <!-- Mão do computador -->
+        <div class="container-mao">
+            <div class="titulo-jogador">
+                <span>Computador</span>
+            </div>
+            <img src="./images/pedra.png" id="mao-computador" class="mao" width="100%" alt="Pedra">
+        </div>
+    </div>
+
+    <!-- Mensagem de resultado -->
+    <div id="resultado-rodada">
+        <span>Escolha uma opção:</span>
+    </div>
+
+    <!-- Opções para o jogador escolher -->
+    <div id="opcoes-jogada">
+        <div class="botao-mao" data-escolha="pedra">
+            <img src="./images/pedra.png" width="50">
+            <span>Pedra</span>
+        </div>
+        <div class="botao-mao" data-escolha="papel">
+            <img src="./images/papel.png" width="50">
+            <span>Papel</span>
+        </div>
+        <div class="botao-mao" data-escolha="tesoura">
+            <img src="./images/tesoura.png" width="50">
+            <span>Tesoura</span>
+        </div>
+    </div>
+</body>
+
+</html>
